@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CandySound.mp3-e005828d51f3948eb21bc2fa2dbdea2c.mp3str"
+
+[deps]
+
+source_file="res://audio/CandySound.mp3"
+dest_files=[ "res://.import/CandySound.mp3-e005828d51f3948eb21bc2fa2dbdea2c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

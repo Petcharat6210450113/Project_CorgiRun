@@ -1,0 +1,317 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Candy_Area2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Bomb_Area2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://DownfailArea2D.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Medicine.tscn" type="PackedScene" id=7]
+[ext_resource path="res://DisplayCandyScore.gd" type="Script" id=8]
+[ext_resource path="res://DoorArea2D.tscn" type="PackedScene" id=9]
+[ext_resource path="res://audio/CandySound.mp3" type="AudioStream" id=10]
+[ext_resource path="res://audio/BombSound.mp3" type="AudioStream" id=11]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 3, 0 )
+
+[node name="Node2D" parent="." instance=ExtResource( 4 )]
+
+[node name="Node2D4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6629, 0 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1661, 0 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3317, 0 )
+
+[node name="Node2D5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4973, 0 )
+
+[node name="Floor2D" parent="." instance=ExtResource( 2 )]
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 1 )]
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D2"]
+position = Vector2( 258, 299 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 8295
+limit_bottom = 598
+editor_draw_limits = true
+
+[node name="UiScore" type="Node2D" parent="KinematicBody2D2"]
+
+[node name="Control" type="Control" parent="KinematicBody2D2/UiScore"]
+margin_left = -1.0
+margin_top = 2.0
+margin_right = 1020.0
+margin_bottom = 599.0
+
+[node name="CandyScore" type="Label" parent="KinematicBody2D2/UiScore/Control"]
+margin_left = 3.0
+margin_top = 297.0
+margin_right = 105.0
+margin_bottom = 334.0
+text = "Candy :"
+
+[node name="DisplayCandyScore" type="Label" parent="KinematicBody2D2/UiScore/Control"]
+margin_left = 55.0
+margin_top = 298.0
+margin_right = 95.0
+margin_bottom = 312.0
+text = "0"
+script = ExtResource( 8 )
+
+[node name="CandySound" type="AudioStreamPlayer" parent="KinematicBody2D2"]
+stream = ExtResource( 10 )
+
+[node name="BombSound" type="AudioStreamPlayer" parent="KinematicBody2D2"]
+stream = ExtResource( 11 )
+
+[node name="Candy_Area2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( 109, -119 )
+
+[node name="Candy_Area2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 245, -119 )
+
+[node name="Candy_Area2D38" parent="." instance=ExtResource( 3 )]
+position = Vector2( 371, -1 )
+
+[node name="Candy_Area2D3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 525, 1 )
+
+[node name="Candy_Area2D4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 864, -2 )
+
+[node name="Candy_Area2D5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 931, 0 )
+
+[node name="Candy_Area2D6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1486, -50 )
+
+[node name="Candy_Area2D39" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1383, 55 )
+
+[node name="Candy_Area2D7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1570, -159 )
+
+[node name="Candy_Area2D8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1913, 27 )
+
+[node name="Candy_Area2D9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1972, 27 )
+
+[node name="Candy_Area2D10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2119, 15 )
+
+[node name="Candy_Area2D11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2199, -98 )
+
+[node name="Candy_Area2D12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2552, -205 )
+
+[node name="Candy_Area2D13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2653, -97 )
+
+[node name="Candy_Area2D14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2712, -95 )
+
+[node name="Candy_Area2D15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2714, -206 )
+
+[node name="Candy_Area2D16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2774, -95 )
+
+[node name="Candy_Area2D17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2960, -205 )
+
+[node name="Candy_Area2D18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3170, 13 )
+
+[node name="Candy_Area2D19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3238, 14 )
+
+[node name="Candy_Area2D20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3304, 15 )
+
+[node name="Candy_Area2D21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3443, 16 )
+
+[node name="Candy_Area2D22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3506, 17 )
+
+[node name="Candy_Area2D23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3782, 13 )
+
+[node name="Candy_Area2D24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3845, 15 )
+
+[node name="Candy_Area2D25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3913, 16 )
+
+[node name="Candy_Area2D27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4171, 18 )
+
+[node name="Candy_Area2D26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5027, -125 )
+
+[node name="Candy_Area2D28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5485, -151 )
+
+[node name="Candy_Area2D29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5933, 37 )
+
+[node name="Candy_Area2D30" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6205, 78 )
+
+[node name="Candy_Area2D31" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6270, 81 )
+
+[node name="Candy_Area2D32" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6500, -137 )
+
+[node name="Candy_Area2D33" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6912, 77 )
+
+[node name="Candy_Area2D34" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7158, 73 )
+
+[node name="Candy_Area2D35" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7248, -40 )
+
+[node name="Candy_Area2D36" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7335, 75 )
+
+[node name="Candy_Area2D37" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7414, -40 )
+
+[node name="Bomb_Area2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 559, 250 )
+
+[node name="Bomb_Area2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 908, 248 )
+
+[node name="Bomb_Area2D3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1014, 248 )
+
+[node name="Bomb_Area2D4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1552, 419 )
+
+[node name="Bomb_Area2D5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1991, 422 )
+
+[node name="Bomb_Area2D6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2595, 379 )
+
+[node name="Bomb_Area2D7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2659, 379 )
+
+[node name="Bomb_Area2D8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3115, 159 )
+
+[node name="Bomb_Area2D9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3178, 272 )
+
+[node name="Bomb_Area2D10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3651, 381 )
+
+[node name="Bomb_Area2D11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3989, 382 )
+
+[node name="Bomb_Area2D12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3054, 160 )
+
+[node name="Bomb_Area2D13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4620, 385 )
+
+[node name="Bomb_Area2D14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4751, 388 )
+
+[node name="Bomb_Area2D15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7318, 440 )
+
+[node name="Bomb_Area2D16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7526, 441 )
+
+[node name="Bomb_Area2D17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7830, 440 )
+
+[node name="Bomb_Area2D18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6613, 445 )
+
+[node name="Medicine" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1325, 368 )
+
+[node name="Medicine2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2749, 255 )
+
+[node name="Medicine3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 6699, 323 )
+
+[node name="DoorArea2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 7507, 248 )
+
+[node name="DownfailArea2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 8914, 1372 )
+rotation = -3.14088
+
+[connection signal="my_signal" from="Candy_Area2D" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D2" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D38" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D3" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D4" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D5" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D6" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D39" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D7" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D8" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D9" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D10" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D11" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D12" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D13" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D14" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D15" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D16" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D17" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D18" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D19" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D20" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D21" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D22" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D23" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D24" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D25" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D27" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D26" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D28" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D29" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D30" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D31" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D32" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D33" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D34" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D35" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D36" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="my_signal" from="Candy_Area2D37" to="KinematicBody2D2" method="_on_Candy_Area2D_my_signal"]
+[connection signal="signal_bomb" from="Bomb_Area2D" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D2" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D3" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D4" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D5" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D6" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D7" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D8" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D9" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D10" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D11" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D12" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D13" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D14" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D15" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D16" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D17" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
+[connection signal="signal_bomb" from="Bomb_Area2D18" to="KinematicBody2D2" method="_on_Bomb_Area2D_signal_bomb"]
